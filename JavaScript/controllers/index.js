@@ -25,7 +25,7 @@ module.exports.set = function(app) {
 
     app.get('/', function (req, res) {
         console.log("/ request recieved!");
-        res.send('Hello World!');
+        res.send('Hello from chooser app!');
     });
 
     app.post('/deletePost', rawBody, function (req, res) {
