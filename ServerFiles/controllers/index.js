@@ -1,6 +1,7 @@
 var mysql = require('mysql');
 var path = require('path');
 
+
 var appDir = path.dirname(require.main.filename);
 
 module.exports.set = function(app) {
@@ -33,7 +34,7 @@ module.exports.set = function(app) {
 
     app.get('/admin', function (req, res) {
         console.log("/ request recieved!");
-        res.sendFile('views/admin.html', {root: appDir  })
+        res.sendFile('/ServerFiles/views/admin.html', {root: process.cwd()  })
 
     });
 
