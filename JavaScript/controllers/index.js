@@ -30,7 +30,7 @@ module.exports.set = function(app) {
 
     app.get('/admin', function (req, res) {
         console.log("/ request recieved!");
-        res.sendfile('views/admin.html', {root: __dirname })
+        res.sendFile('views/admin.html', {root:"./" })
 
     });
 
