@@ -7,7 +7,7 @@ var app = express();
 
 var controllers = require('./controllers');
 controllers.set(app);
-var SERVER_PORT = 8080;
+var SERVER_PORT = process.env.PORT || 1337;
 var server = app.listen(SERVER_PORT, function () {
     var port = server.address().port;
     console.log('Listening on port %s', port);
