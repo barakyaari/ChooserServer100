@@ -30,7 +30,8 @@ module.exports.set = function(app) {
 
     app.get('/admin', function (req, res) {
         console.log("/ request recieved!");
-        res.send('Hello from chooser Admin!');
+        res.sendfile('views/admin.html', {root: __dirname })
+
     });
 
     app.post('/deletePost', rawBody, function (req, res) {
