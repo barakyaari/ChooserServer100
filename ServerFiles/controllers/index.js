@@ -33,7 +33,7 @@ module.exports.set = function(app) {
 
     app.get('/admin', function (req, res) {
         console.log("/ request recieved!");
-        res.sendFile('./views/admin.html', {root: appDir  })
+        res.sendFile('views/admin.html', {root: appDir  })
 
     });
 
