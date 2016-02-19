@@ -11,15 +11,6 @@ var SERVER_PORT = 8080;
 process.env['accountname'] = 'chooserstorage';
 process.env['accountkey'] = 'rFb94KokcSFjPQJflCWmy9t8AqAM7rWdeUNYzGfiaEPKsY8kO2Lm2tF8fgEHsLIVCjGMYlYVP++vQ78+tYpV5A==';
 
-var connection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'admin',
-    password : 'Nsghvnjac1',
-    database : 'chooser'
-});
-connection.connect();
-
-
 app.get('/', function (req, res) {
 	res.send('Hello World!');
 });
@@ -36,6 +27,9 @@ app.get('/getPosts', function (req, res) {
         }
         else {
             console.log('Error while performing Query: %s', sql);
+        }
+    });
+});
 var controllers = require('./controllers');
 controllers.set(app);
 var SERVER_PORT = 8080;
@@ -46,4 +40,3 @@ var server = app.listen(SERVER_PORT, function () {
 
     console.log('Listening on port %s', port);
 });
-
