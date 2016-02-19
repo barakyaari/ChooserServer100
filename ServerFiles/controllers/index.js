@@ -34,7 +34,7 @@ module.exports.set = function(app) {
 
     app.get('/admin', function (req, res) {
         console.log("/ request recieved!");
-        res.sendFile('/ServerFiles/views/admin.html', {root: process.cwd()  })
+        res.sendFile('/views/admin.html', {root: appRoot })
 
     });
 
